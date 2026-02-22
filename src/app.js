@@ -27,6 +27,12 @@ app.use("/api/v1/healthcheck/", healthCheckRouter);
 import authRouter from "./routes/auth.routes.js";
 app.use("/api/v1/auth/", authRouter);
 
+import projectRoutes from "./routes/project.routes.js"
+app.use("/api/v1/projects/", projectRoutes)
+
+import taskRoutes from "./routes/task.routes.js"
+app.use("/api/v1/tasks/", taskRoutes)
+
 // error handler
 app.use(errorHandler);
 
