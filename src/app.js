@@ -33,6 +33,9 @@ app.use("/api/v1/projects/", projectRoutes)
 import taskRoutes from "./routes/task.routes.js"
 app.use("/api/v1/tasks/", taskRoutes)
 
+import noteRoutes from "./routes/note.routes.js"
+app.use("/api/v1/notes/", noteRoutes)
+
 // error handler
 app.use(errorHandler);
 

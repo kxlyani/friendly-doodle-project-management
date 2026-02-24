@@ -12,10 +12,10 @@ export const validate = (req, res, next) => {
     [err.path]: err.msg,
   }));
   
-  console.log("Extracted Errors:", extractedErrors); // Debug log
+  // console.log("Extracted Errors:", extractedErrors); // Debug log
   
   const error = new ApiError(422, "User validation failed", extractedErrors);
-  console.log("ApiError errors:", error.errors); // Debug log
+  // console.log("ApiError errors:", error.errors); // Debug log
   
   return next(error);
 };
